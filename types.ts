@@ -13,8 +13,11 @@ export interface Vulnerability {
   title: string;
   severity: Severity;
   description: string;
-  // ✅ OWASP Reference for the "Judge-Ready" UI
-  owaspRef?: string; 
+
+  // OWASP Reference
+  owaspRef?: string;
+
+  // Deep Dive Data
   attackerLogic: string;
   defenderLogic: string;
   simulatedPayload: string;
@@ -22,7 +25,23 @@ export interface Vulnerability {
   confidence: number;
   secureCodeFix: string;
   killChainStage: string;
-  // Optional legacy fields if needed
+
+  // Scoring Engine Fields
+  impactFactor: number;
+  exploitabilityFactor: number;
+  scoreReason: string;
+
+  // Ethical Payload Fields
+  payloadLabel: string;
+  payloadPurpose: string;
+
+  // ✅ NEW IMPACT ANALYSIS FIELDS
+  exposedAssets: string;
+  attackerGain: string;
+  businessImpact: string;
+  impactCategory: string; // Used to track which mapping we used
+
+  // Optional legacy fields
   category?: string;
   riskScore?: number;
   vulnerableCodeSnippet?: string;

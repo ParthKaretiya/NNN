@@ -1,0 +1,9 @@
+
+{
+  "name": "SentinAI - Enterprise Security Intelligence",
+  "description": "An AI-powered ethical hacking and secure development intelligence platform for enterprise-grade code analysis and threat modeling.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
